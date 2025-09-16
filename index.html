@@ -73,10 +73,25 @@
 
 <!-- Home -->
 <section id="Home" class="flex flex-wrap items-center justify-around px-12 pt-32 pb-12">
-  <div class="poto" data-aos="fade-right">
-    <img src="Picture/Tak berjudul1245_20250906073827.png" alt="My Photo" 
-         class="w-72 h-72 rounded-full border-4 border-blue-950 shadow-lg shadow-cyan-400/50 object-cover">
+  <!-- Profile Flip Photo -->
+  <div class="relative w-72 h-72 [perspective:1000px]" data-aos="fade-right">
+    <div class="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)]">
+      
+      <!-- Foto Depan -->
+      <div class="absolute w-full h-full [backface-visibility:hidden]">
+        <img src="Picture/Tak berjudul1245_20250906073827.png" alt="My Photo Front"
+             class="w-72 h-72 rounded-full border-4 border-blue-950 shadow-lg shadow-cyan-400/50 object-cover">
+      </div>~
+      
+      <!-- Foto Belakang -->
+      <div class="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)]">
+        <img src="Picture/6195102171561838589.jpg" alt="My Photo Back"
+             class="w-72 h-72 rounded-full border-4 border-blue-950 shadow-lg shadow-cyan-400/50 object-cover">
+      </div>
+      
+    </div>
   </div>
+
   <div class="max-w-xl mt-8 md:mt-0" data-aos="fade-left">
     <h1 class="text-3xl text-white font-bold mb-4"><span id="typed"></span></h1>
     <h1 class="text-3xl text-cyan-300 font-bold mb-4"><span id="typing"></span></h1>
@@ -91,62 +106,6 @@
     </a>
   </div>
 </section>
-
-<!-- Skills -->
-<section id="Skill" class="bg-gradient-to-r from-cyan-600 to-indigo-800 text-center py-20 rounded-md mx-4 mt-20" data-aos="fade-up">
-  <h2 class="text-2xl font-bold mb-12 text-white">My Skills</h2>
-  
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-5xl mx-auto">
-    
-    <!-- Skill Card -->
-    <div class="bg-white/10 p-6 rounded-xl shadow-lg hover:scale-105 transition" data-aos="zoom-in">
-      <img src="Picture/html.png" alt="HTML" class="w-16 mx-auto mb-4">
-      <h3 class="text-lg font-semibold">HTML</h3>
-      <div class="w-full bg-white/20 rounded-full h-3 mt-3">
-        <div class="bg-cyan-400 h-3 rounded-full" style="width: 90%;"></div>
-      </div>
-      <p class="text-sm mt-2">90% Proficiency</p>
-    </div>
-
-    <div class="bg-white/10 p-6 rounded-xl shadow-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="100">
-      <img src="Picture/css-3.png" alt="CSS" class="w-16 mx-auto mb-4">
-      <h3 class="text-lg font-semibold">CSS</h3>
-      <div class="w-full bg-white/20 rounded-full h-3 mt-3">
-        <div class="bg-cyan-400 h-3 rounded-full" style="width: 85%;"></div>
-      </div>
-      <p class="text-sm mt-2">85% Proficiency</p>
-    </div>
-
-    <div class="bg-white/10 p-6 rounded-xl shadow-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="200">
-      <img src="Picture/java-script.png" alt="JavaScript" class="w-16 mx-auto mb-4">
-      <h3 class="text-lg font-semibold">JavaScript</h3>
-      <div class="w-full bg-white/20 rounded-full h-3 mt-3">
-        <div class="bg-cyan-400 h-3 rounded-full" style="width: 50%;"></div>
-      </div>
-      <p class="text-sm mt-2">50% Proficiency</p>
-    </div>
-
-    <div class="bg-white/10 p-6 rounded-xl shadow-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="300">
-      <img src="Picture/java.png" alt="Java" class="w-16 mx-auto mb-4">
-      <h3 class="text-lg font-semibold">Java</h3>
-      <div class="w-full bg-white/20 rounded-full h-3 mt-3">
-        <div class="bg-cyan-400 h-3 rounded-full" style="width: 30%;"></div>
-      </div>
-      <p class="text-sm mt-2">30% Proficiency</p>
-    </div>
-
-    <div class="bg-white/10 p-6 rounded-xl shadow-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="400">
-      <img src="Picture/figma.png" alt="Figma" class="w-16 mx-auto mb-4">
-      <h3 class="text-lg font-semibold">Figma</h3>
-      <div class="w-full bg-white/20 rounded-full h-3 mt-3">
-        <div class="bg-cyan-400 h-3 rounded-full" style="width: 80%;"></div>
-      </div>
-      <p class="text-sm mt-2">80% Proficiency</p>
-    </div>
-
-  </div>
-</section>
-
 
 <!-- Services -->
 <section id="Services" class="py-20 text-center" data-aos="fade-up">
