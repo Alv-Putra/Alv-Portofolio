@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alvazri Z.S — Designer & Developer</title>
+  <title>Alvazri Z.S - Web Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -54,27 +54,6 @@
       color: var(--text);
       font-family: 'DM Sans', sans-serif;
       overflow-x: hidden;
-      cursor: none;
-    }
-
-    /* Custom Cursor */
-    .cursor {
-      width: 10px; height: 10px;
-      background: var(--accent);
-      border-radius: 50%;
-      position: fixed;
-      pointer-events: none;
-      z-index: 99999;
-      transition: transform 0.1s;
-    }
-    .cursor-follower {
-      width: 36px; height: 36px;
-      border: 2px solid rgba(124, 106, 247, 0.4);
-      border-radius: 50%;
-      position: fixed;
-      pointer-events: none;
-      z-index: 99998;
-      transition: all 0.15s ease;
     }
 
     /* Noise texture overlay */
@@ -136,6 +115,19 @@
       transition: width 1s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
 
+    .skill-icon {
+      width: 48px;
+      height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      background: rgba(124,106,247,0.12);
+      color: var(--accent3);
+      font-size: 1.35rem;
+      margin-bottom: 1rem;
+    }
+
     .mobile-menu {
       position: fixed;
       top: 70px;
@@ -173,10 +165,6 @@
 </head>
 <body class="bg-bg text-text font-dm">
 
-  <!-- Custom Cursor -->
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-follower" id="cursorFollower"></div>
-
   <!-- Preloader -->
   <div id="preloader">
     <div class="preloader-text">Alvazri</div>
@@ -190,7 +178,6 @@
       <li><a href="#Home" class="text-muted no-underline text-sm font-medium px-3.5 py-2 rounded-lg transition-all hover:text-text hover:bg-surface2">Home</a></li>
       <li><a href="#About" class="text-muted no-underline text-sm font-medium px-3.5 py-2 rounded-lg transition-all hover:text-text hover:bg-surface2">About</a></li>
       <li><a href="#Skill" class="text-muted no-underline text-sm font-medium px-3.5 py-2 rounded-lg transition-all hover:text-text hover:bg-surface2">Skills</a></li>
-      <li><a href="#Services" class="text-muted no-underline text-sm font-medium px-3.5 py-2 rounded-lg transition-all hover:text-text hover:bg-surface2">Services</a></li>
       <li><a href="#Project" class="text-muted no-underline text-sm font-medium px-3.5 py-2 rounded-lg transition-all hover:text-text hover:bg-surface2">Projects</a></li>
       <li><a href="#Contact" class="text-muted no-underline text-sm font-medium px-3.5 py-2 rounded-lg transition-all hover:text-text hover:bg-surface2">Contact</a></li>
     </ul>
@@ -211,7 +198,6 @@
     <a href="#Home" onclick="closeMobile()" class="no-underline">Home</a>
     <a href="#About" onclick="closeMobile()" class="no-underline">About</a>
     <a href="#Skill" onclick="closeMobile()" class="no-underline">Skills</a>
-    <a href="#Services" onclick="closeMobile()" class="no-underline">Services</a>
     <a href="#Project" onclick="closeMobile()" class="no-underline">Projects</a>
     <a href="#Contact" onclick="closeMobile()" class="no-underline">Contact</a>
   </div>
@@ -221,19 +207,19 @@
     <div class="absolute inset-0" style="background: radial-gradient(ellipse 80% 60% at 70% 50%, rgba(124,106,247,0.12) 0%, transparent 60%), radial-gradient(ellipse 50% 40% at 20% 80%, rgba(78,255,197,0.08) 0%, transparent 50%);"></div>
     <div class="absolute inset-0 opacity-30" style="background-image: linear-gradient(rgba(124,106,247,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(124,106,247,0.05) 1px, transparent 1px); background-size: 50px 50px;"></div>
 
-    <div class="flex flex-col md:flex-row items-center gap-12 w-full max-w-6xl relative z-10">
+    <div class="flex flex-col md:flex-row items-center gap-12 w-full max-w-6xl mx-auto relative z-10">
       <div class="flex-1">
         <div class="inline-block px-4 py-2 rounded-full border border-accent border-opacity-30 mb-8">
           <span class="w-2 h-2 rounded-full bg-accent3 inline-block mr-2"></span>
-          <span class="text-sm text-accent3"></span>
+          <span class="text-sm text-accent3">Available for selected projects</span>
         </div>
         <h1 class="hero-title text-5xl md:text-7xl font-syne font-bold leading-tight mb-6">
           <span id="typed-name" class="block"></span>
           <span class="line-accent" id="typed-role" style="background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></span>
         </h1>
         <p class="text-lg text-muted mb-8 leading-relaxed max-w-xl">
-          I design and build user-friendly websites and mobile apps with a focus on clean, 
-          functional, and visually appealing interfaces that bring ideas to life.
+          I build clean web interfaces and backend features with JavaScript, NextJs, ExpressJs,
+          and SQL. The focus is simple: pages that look neat, load well, and are easy to manage.
         </p>
         <div class="flex flex-col md:flex-row gap-4">
           <a href="/File/CV-Alvazri.pdf" download class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium no-underline text-white transition-all" style="background: linear-gradient(135deg, var(--accent), var(--accent2)); box-shadow: 0 8px 24px rgba(124,106,247,0.3);">
@@ -246,8 +232,8 @@
       </div>
       <div class="flex-1 flex justify-center">
         <div class="relative">
-          <div class="absolute inset-0 rounded-full" style="background: linear-gradient(135deg, rgba(124,106,247,0.3), rgba(233,108,255,0.2)); filter: blur(40px);"></div>
-          <div class="w-80 h-80 rounded-full relative border-2" style="border-color: rgba(124,106,247,0.3); overflow: hidden;">
+          <div class="absolute inset-0 rounded-full" style="background: linear-gradient(135deg, rgba(252, 32, 32, 0.3), rgba(255, 0, 0, 0.2)); filter: blur(40px);"></div>
+          <div class="w-80 h-80 rounded-full relative border-2" style="border-color: rgba(251, 90, 90, 0.3); overflow: hidden;">
             <img src="Picture/image.png" alt="Alvazri" class="w-full h-full object-cover"
                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
             <div style="width:100%;height:100%;border-radius:50%;background:linear-gradient(135deg,#1a1a2e,#2a1a4e);display:none;align-items:center;justify-content:center;border:3px solid rgba(124,106,247,0.3);font-size:5rem;color:rgba(124,106,247,0.4);">
@@ -281,13 +267,12 @@
             <h2 class="text-4xl md:text-5xl font-syne font-bold">Crafting Digital<br>Experiences</h2>
           </div>
           <p class="text-muted mb-6 leading-relaxed">
-            I'm Alvazri Zulian Saputra — a passionate website and mobile app designer 
-            based in Indonesia. I love turning complex problems into simple, beautiful, 
-            and intuitive designs.
+            I'm Alvazri Zulian Saputra, a web developer based in Indonesia. I work across
+            frontend, backend, and website management for practical web projects.
           </p>
           <p class="text-muted mb-8 leading-relaxed">
-            With experience in UI/UX, web development, and graphic design, I focus on 
-            creating digital products that not only look great but also work seamlessly.
+            I like building interfaces that feel straightforward, backed by simple systems
+            that are easy to update and maintain after launch.
           </p>
           <div class="grid grid-cols-2 gap-6 mb-8">
             <div>
@@ -296,7 +281,7 @@
             </div>
             <div>
               <div class="text-xs font-medium text-muted mb-2" style="text-transform: uppercase; letter-spacing: 0.04em;">Role</div>
-              <div class="text-text">Designer & Developer</div>
+              <div class="text-text">Frontend and Backend Developer</div>
             </div>
             <div>
               <div class="text-xs font-medium text-muted mb-2" style="text-transform: uppercase; letter-spacing: 0.04em;">Location</div>
@@ -304,7 +289,7 @@
             </div>
             <div>
               <div class="text-xs font-medium text-muted mb-2" style="text-transform: uppercase; letter-spacing: 0.04em;">Availability</div>
-              <div style="color:red;">● Close to work</div>
+              <div style="color:#ef4444;"><i class="fas fa-circle text-xs" style="margin-right:8px;"></i>Currently unavailable</div>
             </div>
           </div>
           <a href="/File/CV-Alvazri.pdf" download class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium no-underline text-white transition-all" style="background: linear-gradient(135deg, var(--accent), var(--accent2)); box-shadow: 0 8px 24px rgba(124,106,247,0.3);">
@@ -320,100 +305,51 @@
     <div class="max-w-6xl mx-auto">
       <div class="fade-up mb-16">
         <div class="inline-block text-sm font-medium text-accent3 mb-4" style="text-transform: uppercase; letter-spacing: 0.04em;">Skills</div>
-        <h2 class="text-4xl md:text-5xl font-syne font-bold mb-4">My Expertise</h2>
-        <p class="text-muted text-lg">Technologies and tools I use to bring ideas to life.</p>
+        <h2 class="text-4xl md:text-5xl font-syne font-bold mb-4">Tools I Work With</h2>
+        <p class="text-muted text-lg">A practical stack for building, managing, and presenting digital products.</p>
       </div>
       <div class="grid md:grid-cols-3 gap-8">
         <div class="fade-up p-6 rounded-lg" style="background: var(--surface); border: 1px solid var(--border);">
-          <div class="text-4xl mb-4">🎨</div>
-          <div class="font-medium text-lg mb-2">Figma / UI Design</div>
-          <p class="text-muted text-sm mb-4">Creating wireframes, prototypes and high-fidelity UI designs.</p>
+          <div class="skill-icon"><i class="fab fa-react"></i></div>
+          <div class="font-medium text-lg mb-2">NextJs</div>
+          <p class="text-muted text-sm mb-4">Building responsive interfaces, pages, and reusable frontend components.</p>
           <div class="w-full h-1 rounded-full bg-surface2 mb-2" style="background: var(--surface2);"><div class="skill-bar-fill bg-accent" data-width="90" style="background: var(--accent);"></div></div>
           <div class="text-sm text-muted">90%</div>
         </div>
         <div class="fade-up p-6 rounded-lg transition-all" style="background: var(--surface); border: 1px solid var(--border); transition-delay:0.1s">
-          <div class="text-4xl mb-4">🌐</div>
-          <div class="font-medium text-lg mb-2">HTML / CSS</div>
-          <p class="text-muted text-sm mb-4">Semantic markup and modern CSS including Tailwind CSS.</p>
+          <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+          <div class="font-medium text-lg mb-2">ExpressJs</div>
+          <p class="text-muted text-sm mb-4">Creating APIs, routing, middleware, and backend logic for web projects.</p>
           <div class="w-full h-1 rounded-full bg-surface2 mb-2"><div class="skill-bar-fill bg-accent" data-width="85" style="background: var(--accent);"></div></div>
           <div class="text-sm text-muted">85%</div>
         </div>
         <div class="fade-up p-6 rounded-lg transition-all" style="background: var(--surface); border: 1px solid var(--border); transition-delay:0.2s">
-          <div class="text-4xl mb-4">⚡</div>
-          <div class="font-medium text-lg mb-2">JavaScript</div>
-          <p class="text-muted text-sm mb-4">Vanilla JS and modern frameworks for interactive web apps.</p>
-          <div class="w-full h-1 rounded-full bg-surface2 mb-2"><div class="skill-bar-fill bg-accent" data-width="75" style="background: var(--accent);"></div></div>
-          <div class="text-sm text-muted">75%</div>
-        </div>
-        <div class="fade-up p-6 rounded-lg transition-all" style="background: var(--surface); border: 1px solid var(--border); transition-delay:0.3s">
-          <div class="text-4xl mb-4">📱</div>
-          <div class="font-medium text-lg mb-2">Mobile App Design</div>
-          <p class="text-muted text-sm mb-4">Designing intuitive mobile interfaces for iOS & Android.</p>
+          <div class="skill-icon"><i class="fas fa-database"></i></div>
+          <div class="font-medium text-lg mb-2">Sql</div>
+          <p class="text-muted text-sm mb-4">Designing queries, managing data, and working with relational databases.</p>
           <div class="w-full h-1 rounded-full bg-surface2 mb-2"><div class="skill-bar-fill bg-accent" data-width="80" style="background: var(--accent);"></div></div>
           <div class="text-sm text-muted">80%</div>
         </div>
-        <div class="fade-up p-6 rounded-lg transition-all" style="background: var(--surface); border: 1px solid var(--border); transition-delay:0.4s">
-          <div class="text-4xl mb-4">🖼️</div>
-          <div class="font-medium text-lg mb-2">Graphic Design</div>
-          <p class="text-muted text-sm mb-4">Branding, logos, and visual identity using Illustrator & Photoshop.</p>
+        <div class="fade-up p-6 rounded-lg transition-all" style="background: var(--surface); border: 1px solid var(--border); transition-delay:0.3s">
+          <div class="skill-icon"><i class="fab fa-js"></i></div>
+          <div class="font-medium text-lg mb-2">JavaScript</div>
+          <p class="text-muted text-sm mb-4">Writing interactive browser features and application logic.</p>
           <div class="w-full h-1 rounded-full bg-surface2 mb-2"><div class="skill-bar-fill bg-accent" data-width="82" style="background: var(--accent);"></div></div>
           <div class="text-sm text-muted">82%</div>
         </div>
+        <div class="fade-up p-6 rounded-lg transition-all" style="background: var(--surface); border: 1px solid var(--border); transition-delay:0.4s">
+          <div class="skill-icon"><i class="fas fa-globe"></i></div>
+          <div class="font-medium text-lg mb-2">Web Management</div>
+          <p class="text-muted text-sm mb-4">Handling content updates, deployment flow, and website maintenance.</p>
+          <div class="w-full h-1 rounded-full bg-surface2 mb-2"><div class="skill-bar-fill bg-accent" data-width="78" style="background: var(--accent);"></div></div>
+          <div class="text-sm text-muted">78%</div>
+        </div>
         <div class="fade-up p-6 rounded-lg transition-all" style="background: var(--surface); border: 1px solid var(--border); transition-delay:0.5s">
-          <div class="text-4xl mb-4">🔧</div>
-          <div class="font-medium text-lg mb-2">Version Control</div>
-          <p class="text-muted text-sm mb-4">Git & GitHub for collaborative development and code management.</p>
-          <div class="w-full h-1 rounded-full bg-surface2 mb-2"><div class="skill-bar-fill bg-accent" data-width="70" style="background: var(--accent);"></div></div>
-          <div class="text-sm text-muted">70%</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="Services" class="py-24 px-8 md:px-16">
-    <div class="max-w-6xl mx-auto">
-      <div class="fade-up text-center mb-16">
-        <div class="inline-block text-sm font-medium text-accent3 mb-4" style="text-transform: uppercase; letter-spacing: 0.04em;">Services</div>
-        <h2 class="text-4xl md:text-5xl font-syne font-bold mb-4">What I Can Do For You</h2>
-        <p class="text-muted text-lg">From concept to launch, I provide end-to-end design and development services.</p>
-      </div>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="fade-up p-8 rounded-lg text-center transition-all" style="background: var(--surface); border: 1px solid var(--border);">
-          <div class="inline-flex items-center justify-center w-16 h-16 rounded-lg mb-6" style="background: rgba(124,106,247,0.15);">
-            <i class="fas fa-laptop-code text-2xl" style="color: var(--accent);"></i>
-          </div>
-          <h3 class="text-xl font-medium mb-4">Web Design & Dev</h3>
-          <p class="text-muted text-sm mb-6">Responsive, performant websites built with modern tools. From landing pages to full web applications.</p>
-          <div class="flex flex-wrap gap-2 justify-center">
-            <span class="inline-block px-3 py-1 rounded-full text-xs font-medium" style="background: rgba(124,106,247,0.15); color: var(--accent);">HTML/CSS</span>
-            <span class="inline-block px-3 py-1 rounded-full text-xs font-medium" style="background: rgba(124,106,247,0.15); color: var(--accent);">JavaScript</span>
-            <span class="inline-block px-3 py-1 rounded-full text-xs font-medium" style="background: rgba(124,106,247,0.15); color: var(--accent);">Tailwind</span>
-          </div>
-        </div>
-        <div class="fade-up p-8 rounded-lg text-center transition-all" style="background: var(--surface); border: 1px solid var(--border); transition-delay:0.15s">
-          <div class="inline-flex items-center justify-center w-16 h-16 rounded-lg mb-6" style="background: rgba(124,106,247,0.15);">
-            <i class="fas fa-mobile-alt text-2xl" style="color: var(--accent);"></i>
-          </div>
-          <h3 class="text-xl font-medium mb-4">UI/UX Design</h3>
-          <p class="text-muted text-sm mb-6">Intuitive, user-centered interface designs for mobile and web — wireframes, prototypes, and design systems.</p>
-          <div class="flex flex-wrap gap-2 justify-center">
-            <span class="inline-block px-3 py-1 rounded-full text-xs font-medium" style="background: rgba(124,106,247,0.15); color: var(--accent);">Figma</span>
-            <span class="inline-block px-3 py-1 rounded-full text-xs font-medium" style="background: rgba(124,106,247,0.15); color: var(--accent);">Prototyping</span>
-            <span class="inline-block px-3 py-1 rounded-full text-xs font-medium" style="background: rgba(124,106,247,0.15); color: var(--accent);">UX Research</span>
-          </div>
-        </div>
-        <div class="fade-up p-8 rounded-lg text-center transition-all" style="background: var(--surface); border: 1px solid var(--border); transition-delay:0.3s">
-          <div class="inline-flex items-center justify-center w-16 h-16 rounded-lg mb-6" style="background: rgba(124,106,247,0.15);">
-            <i class="fas fa-paint-brush text-2xl" style="color: var(--accent);"></i>
-          </div>
-          <h3 class="text-xl font-medium mb-4">Graphic Design</h3>
-          <p class="text-muted text-sm mb-6">Visual branding, logos, and design assets that strengthen your brand identity and stand out.</p>
-          <div class="flex flex-wrap gap-2 justify-center">
-            <span class="inline-block px-3 py-1 rounded-full text-xs font-medium" style="background: rgba(124,106,247,0.15); color: var(--accent);">Branding</span>
-            <span class="inline-block px-3 py-1 rounded-full text-xs font-medium" style="background: rgba(124,106,247,0.15); color: var(--accent);">Logo Design</span>
-            <span class="inline-block px-3 py-1 rounded-full text-xs font-medium" style="background: rgba(124,106,247,0.15); color: var(--accent);">Photoshop</span>
-          </div>
+          <div class="skill-icon"><i class="fas fa-file-powerpoint"></i></div>
+          <div class="font-medium text-lg mb-2">Presentation Software</div>
+          <p class="text-muted text-sm mb-4">Preparing clear slide decks for project reports and product pitches.</p>
+          <div class="w-full h-1 rounded-full bg-surface2 mb-2"><div class="skill-bar-fill bg-accent" data-width="76" style="background: var(--accent);"></div></div>
+          <div class="text-sm text-muted">76%</div>
         </div>
       </div>
     </div>
@@ -593,8 +529,8 @@
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
       <div class="footer-logo font-syne font-bold" style="background: linear-gradient(135deg, #fff 40%, var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Alvazri Z.S</div>
       <div class="flex flex-col md:flex-row gap-4 text-center md:text-left">
-        <p class="text-muted text-sm">© 2025 Alvazri Zulian Saputra · All Rights Reserved</p>
-        <p class="text-muted text-sm">Built with <span style="color:var(--accent2)">♥</span></p>
+        <p class="text-muted text-sm">Copyright 2025 Alvazri Zulian Saputra. All Rights Reserved</p>
+        <p class="text-muted text-sm">Built by Alvazri Z.S</p>
       </div>
     </div>
   </footer>

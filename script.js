@@ -7,41 +7,6 @@ window.addEventListener('load', () => {
   }, 1500);
 });
 
-// Custom cursor
-const cursor = document.getElementById('cursor');
-const follower = document.getElementById('cursorFollower');
-let mouseX = 0, mouseY = 0;
-let followerX = 0, followerY = 0;
-
-document.addEventListener('mousemove', (e) => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-  cursor.style.left = mouseX - 5 + 'px';
-  cursor.style.top = mouseY - 5 + 'px';
-});
-
-function animateFollower() {
-  followerX += (mouseX - followerX - 18) * 0.12;
-  followerY += (mouseY - followerY - 18) * 0.12;
-  follower.style.left = followerX + 'px';
-  follower.style.top = followerY + 'px';
-  requestAnimationFrame(animateFollower);
-}
-animateFollower();
-
-document.querySelectorAll('a, button').forEach(el => {
-  el.addEventListener('mouseenter', () => { 
-    cursor.style.transform = 'scale(2)';
-    follower.style.transform = 'scale(1.5)';
-    follower.style.borderColor = 'rgba(124,106,247,0.6)';
-  });
-  el.addEventListener('mouseleave', () => {
-    cursor.style.transform = 'scale(1)';
-    follower.style.transform = 'scale(1)';
-    follower.style.borderColor = 'rgba(124,106,247,0.4)';
-  });
-});
-
 // Typed.js
 new Typed('#typed-name', {
   strings: ['Alvazri Zulian Saputra'],
@@ -49,7 +14,7 @@ new Typed('#typed-name', {
   showCursor: false,
 });
 new Typed('#typed-role', {
-  strings: ['Web Designer', 'UI/UX Designer', 'Mobile App Developer'],
+  strings: ['Web Developer', 'NextJs Developer', 'ExpressJs Developer'],
   typeSpeed: 70,
   backSpeed: 40,
   backDelay: 2000,
